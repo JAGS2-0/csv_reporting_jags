@@ -7,6 +7,7 @@ CSV.foreach('/Users/jessica/Code/TIY - Assignments/csv_reporting_jags/planet_exp
   @money = @total_funds.reduce (:+)
 
   @trips = routes.push lines['Destination']
+
 end
 
 fry_trips = 0
@@ -26,8 +27,21 @@ leela_trips = 0
   end
 end
 
-planetary_funrds = @trips.zip(@total_funds)
-puts planetary_funrds
+# i'm pretty sure this will work, but I feel like there has to be a better way
+# planetary_funds = @trips.zip(@total_funds)
+# earth = 0
+# mars = 0
+# uranus = 0
+# mercury = 0
+# saturn = 0
+# moon = 0
+# jupiter = 0
+# planetary_funds.select do |t,f|
+#   if t == 'Earth'
+#     earth += f
+#   end
+# end
+# planetary_funds
 
 puts "Total funds for the week #{@money}"
 puts ""
